@@ -29,9 +29,9 @@ def  update_user(request,id):
     return render(request, 'users-form.html', {'form': form, 'user': user})
 
 
-def  delete_user(request,id):
+def  delete_user(request, id):
     user = User.objects.get(id=id)
-
+    form = UserForm(request.POST or None, instance = users)
     if request.method == 'POST':
         user.delete()
         return redirect('list_users')
