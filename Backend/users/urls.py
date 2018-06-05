@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import list_users, create_user, uptade_user, delete_user
+from .views import list_users, create_user, update_user, delete_user
 
 #criação das urls do crud
 
